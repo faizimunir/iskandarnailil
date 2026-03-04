@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Undangan Pernikahan - Elyana & Syahril">
+  <title>Undangan Pernikahan - Elyana & Syahril</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Love+Light&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background music (mulai saat buka undangan) -->
+  <audio id="bgMusic" preload="auto" loop>
+    <source src="https://bitwave.my.id/wp-content/uploads/2024/12/Irenne-Ghea-Feat-Widhi-Arjuna-Sotya-Dangdut.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Widget musik: putar/jeda -->
+  <button type="button" id="musicToggle" class="music-widget" aria-label="Jeda musik" title="Jeda musik" style="display: none;">
+    <span class="music-widget-icon" aria-hidden="true">⏸</span>
+  </button>
+
+  <!-- Cover: layar 1 = undangan (background JAWA-FALLBACK), layar 2 = video (setelah scroll) -->
+  <section id="cover" class="cover">
+    <!-- Halaman utama: hanya kartu undangan, background JAWA-FALLBACK.jpg -->
+    <div id="coverScreen1" class="cover-screen cover-screen--invite">
+      <div class="cover-content" id="coverContent">
+        <p class="cover-label">The Wedding of</p>
+        <h1 class="cover-names" id="coverNames">Iskandar & Nailil</h1>
+        <!-- <p class="cover-to">Kepada Yth:</p>
+        <p class="cover-guest" id="guestName">Nama Tamu</p> -->
+        <button type="button" class="btn-open" id="btnOpen" aria-label="Buka undangan">Buka Undangan</button>
+      </div>
+    </div>
+    <!-- Setelah klik: scroll ke sini, video diputar + musik -->
+    <div id="coverScreen2" class="cover-screen cover-screen--video">
+      <div class="cover-video">
+        <video id="coverVideo" muted playsinline poster="Assets/JAWA-FALLBACK.jpg">
+          <source src="JAWA-MOTION-COMPRESS-1.mp4" type="video/mp4">
+        </video>
+        <div id="coverFallback" class="cover-fallback" aria-hidden="true" style="background-image: url('Assets/JAWA-FALLBACK.jpg');"></div>
+        <div class="cover-overlay"></div>
+      </div>
+      <div id="coverIntroText" class="cover-intro-text" aria-hidden="true">
+        <p class="cover-intro-label">The Wedding of</p>
+        <h2 class="cover-intro-name1">Iskandar</h2>
+        <span class="cover-intro-amp">&</span>
+        <h2 class="cover-intro-name2">Nailil</h2>
+        <p class="cover-intro-date">09-04-2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content (visible after open) -->
+  <main id="mainContent" class="main-content" aria-hidden="true" style="display: none;">
+    <!-- Initials + Ayat (motif atas/bawah sebagai background section, card di atas) -->
+    <section class="section section-initials-ayat animate-on-scroll">
+      <div class="initials-ayat-card">
+        <div class="initials-ayat-image">
+          <img src="Assets/1.png" alt="" aria-hidden="true">
+        </div>
+        <div class="initials-wrap">
+          <span class="initial">I</span>
+          <span class="initial-amp">&</span>
+          <span class="initial">N</span>
+        </div>
+        <blockquote class="ayat-text">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+        </blockquote>
+        <cite>— QS. Ar-Rum : 21 —</cite>
+      </div>
+    </section>
+
+    <!-- We Are + Couple (satu section, background JAWA-BACKGROUND, card lengkung setengah lingkaran) -->
+    <section class="section section-we-are-couple animate-on-scroll">
+      <div class="we-are-couple-card">
+        <div class="we-are-couple-card-motif we-are-couple-card-motif--top">
+          <img src="Assets/JAWA-MOTIF-ATAS.png" alt="" aria-hidden="true">
+        </div>
+        <div class="we-are-couple-gunungan">
+          <img src="Assets/JAWA-GUNUNGAN.png" alt="" aria-hidden="true">
+        </div>
+        <h2 class="section-title">We Are<br>Getting Married!</h2>
+        <p class="we-are-intro">Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami:</p>
+        <div class="couple-cards">
+          <div class="couple-card couple-card--layered animate-on-scroll-item">
+            <div class="couple-photo couple-photo--layered">
+              <div class="couple-photo-layer couple-photo-layer--frame" aria-hidden="true"><img src="Assets/JAWA-COUPLE-1.png" alt=""></div>
+              <div class="couple-photo-layer couple-photo-layer--photo"><img src="Assets/iskandar.jpeg" alt="Elyana"></div>
+              <div class="couple-photo-layer couple-photo-layer--floral" aria-hidden="true"><img src="Assets/JAWA-COUPLE-2.png" alt=""></div>
+            </div>
+            <h3 class="couple-name">Iskandar</h3>
+            <p class="couple-fullname">Mukhammad Iskandar</p>
+            <p class="couple-parents">Putra dari Bapak Sucipto & Ibu Chotimah</p>
+          </div>
+          <span class="couple-amp">&</span>
+          <div class="couple-card couple-card--layered couple-card--nailil animate-on-scroll-item">
+            <div class="couple-photo couple-photo--layered">
+              <div class="couple-photo-layer couple-photo-layer--frame" aria-hidden="true"><img src="Assets/JAWA-COUPLE-3.png" alt=""></div>
+              <div class="couple-photo-layer couple-photo-layer--photo"><img src="Assets/nailil.jpeg" alt="Nailil"></div>
+              <div class="couple-photo-layer couple-photo-layer--floral" aria-hidden="true"><img src="Assets/JAWA-COUPLE-4.png" alt=""></div>
+            </div>
+            <h3 class="couple-name">Nailil</h3>
+            <p class="couple-fullname">Nailil Rizkiyah</p>
+            <p class="couple-parents">Putri dari Bapak Mulyono & Ibu Khusnul khotimah</p>
+          </div>
+        </div>
+        <div class="we-are-couple-card-motif we-are-couple-card-motif--bottom">
+          <img src="Assets/JAWA-MOTIF-BAWAH.png" alt="" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown ke tanggal akad nikah -->
+    <section class="section countdown-section animate-on-scroll">
+      <h2 class="section-title">Save The Date</h2>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-value" id="days">00</span>
+          <span class="countdown-label">Hari</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="hours">00</span>
+          <span class="countdown-label">Jam</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="minutes">00</span>
+          <span class="countdown-label">Menit</span>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-value" id="seconds">00</span>
+          <span class="countdown-label">Detik</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Invitation text -->
+    <section class="section invite-text animate-on-scroll">
+      <p class="invite-intro">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i, untuk menghadiri acara pernikahan kami:</p>
+    </section>
+
+    <!-- Events: Akad & Resepsi -->
+    <section class="section events animate-on-scroll">
+      <div class="event-card">
+        <h3 class="event-title">Akad Nikah</h3>
+        <p class="event-day">Kamis</p>
+        <p class="event-date">9 April 2026</p>
+        <p class="event-time">07.00 WIB</p>
+        <p class="event-venue">Rumah Mempelai Putri</p>
+        <p class="event-address">Jalan gatot subroto gang 3 Rt 03 Rw 04, kelurahan petahunan, kecamatan gadingrejo,kota Pasuruan</p>
+        <a href="https://maps.app.goo.gl/RNovGFMsRKphCAdL6" class="btn-map" target="_blank" rel="noopener">Google Map</a>
+      </div>
+      <div class="event-card">
+        <h3 class="event-title">Resepsi Pernikahan Mempelai Putri</h3>
+        <p class="event-day">Kamis</p>
+        <p class="event-date">9 April 2026</p>
+        <p class="event-time">10.00 WIB - Selesai</p>
+        <p class="event-venue">Rumah Mempelai Putri</p>
+        <p class="event-address">Jalan gatot subroto gang 3 Rt 03 Rw 04, kelurahan petahunan, kecamatan gadingrejo,kota Pasuruan</p>
+        <a href="https://maps.app.goo.gl/RNovGFMsRKphCAdL6" class="btn-map" target="_blank" rel="noopener">Google Map</a>
+      </div>
+      <div class="event-card">
+        <h3 class="event-title">Resepsi Pernikahan Mempelai Putra</h3>
+        <p class="event-day">Minggu</p>
+        <p class="event-date">12 April 2026</p>
+        <p class="event-time">Bebas</p>
+        <p class="event-venue">Rumah Mempelai Putra</p>
+        <p class="event-address">Blandongan RT 02 RW 03, Kec. Bugul Kidul, Kota Pasuruan, Jawa Timur</p>
+        <a href="https://maps.app.goo.gl/uvSCUiQ36TRUUdj87" class="btn-map" target="_blank" rel="noopener">Google Map</a>
+      </div>
+    </section>
+
+    <!-- Love Gift (QRIS) -->
+    <section class="section love-gift animate-on-scroll">
+      <h2 class="section-title">Love Gift</h2>
+      <p class="love-gift-intro">Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih untuk kami, dapat scan QRIS berikut:</p>
+      <div class="gift-cards gift-cards--qris">
+        <div class="gift-card gift-card--qris">
+          <img src="Assets/QRIS.jpeg" alt="QRIS - Scan untuk transfer" class="gift-qris-img">
+          <p class="gift-qris-caption">Scan QRIS di atas untuk transfer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terima Kasih -->
+    <section class="section thanks animate-on-scroll">
+      <h2 class="section-title">Terima Kasih</h2>
+      <h3 class="section-title wishes-title">Wishes</h3>
+      <p class="wishes-subtitle">Ucapan Selamat & Do'a</p>
+      <div class="wishes-list" id="wishesList">
+        <!-- Wishes will be loaded here -->
+      </div>
+      <form class="wish-form" id="wishForm">
+        <label for="wishName" class="sr-only">Nama</label>
+        <input type="text" id="wishName" placeholder="Nama Anda" required>
+        <label for="wishMessage" class="sr-only">Ucapan</label>
+        <textarea id="wishMessage" placeholder="Tulis ucapan dan doa..." required></textarea>
+        <button type="submit" class="btn-submit">Kirim Ucapan</button>
+      </form>
+    </section>
+
+    <!-- Closing -->
+    <section class="section closing animate-on-scroll">
+      <p class="closing-text">Suatu kebahagiaan & kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu kepada kami</p>
+      <h2 class="closing-names">Kami Yang Berbahagia,</h2>
+      <h2 class="closing-couple">Iskandar & Nailil</h2>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
