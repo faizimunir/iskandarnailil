@@ -1,12 +1,15 @@
 // Ubah data di sini untuk menyesuaikan undangan Anda
 window.WEDDING_CONFIG = {
   // Nama pasangan (untuk cover & tampilan)
-  groomName: 'Syahril',
-  brideName: 'Elyana',
-  groomFullName: 'Syahril Rendra Backhtiar',
-  brideFullName: 'Elyana Azkiya Nur',
-  groomParents: 'Putra dari Bapak Sufian Jadin & Ibu Elmira Ghendis',
-  brideParents: 'Putri dari Bapak Nasrudin Hatta & Ibu Elma Muna',
+  groomName: 'Iskandar',
+  brideName: 'Nailil',
+  groomFullName: 'Mukhammad Iskandar',
+  brideFullName: 'Nailil Rizkiyah',
+  groomParents: 'Putra dari Bapak Sucipto & Ibu Chotimah',
+  brideParents: 'Putri dari Bapak Mulyono & Ibu Khusnul khotimah',
+  // Inisial (mempelai putra & putri) untuk tampilan
+  groomInitial: 'I',
+  brideInitial: 'N',
 
   // Tanggal pernikahan (untuk countdown & teks) — countdown pakai tanggal akad nikah
   weddingDate: '2026-04-09',
@@ -22,7 +25,7 @@ window.WEDDING_CONFIG = {
   // Love gift
   bankName: 'Bank Mandiri',
   accountNumber: '123123123',
-  accountName: 'Elyana Azkiya Nur',
+  accountName: 'Nailil Rizkiyah',
 
   // Sosmed / live streaming (opsional)
   instagramBride: 'https://www.instagram.com/',
