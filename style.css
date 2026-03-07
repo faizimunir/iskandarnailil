@@ -10,6 +10,8 @@
   --color-text-muted: #a89f8f;
   --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Cormorant Garamond', Georgia, serif;
+  --font-weight-display: 700;
+  --font-weight-body: 600;
   --font-script: 'Great Vibes', cursive;
   --font-initial: 'Love Light', cursive;
   --transition: 0.3s ease;
@@ -30,6 +32,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
   font-size: 18px;
   line-height: 1.6;
   color: var(--color-text);
@@ -191,8 +194,8 @@ a:hover {
 
 .cover-names {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.7rem, 5vw, 2.4rem);
-  font-weight: 600;
   color: var(--color-cream);
   margin: 0 0 1.25rem;
   line-height: 1.2;
@@ -215,6 +218,7 @@ a:hover {
 
 .btn-open {
   font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
   font-size: 0.95rem;
   padding: 0.7rem 2rem;
   background: transparent;
@@ -275,8 +279,8 @@ a:hover {
 .cover-intro-name1,
 .cover-intro-name2 {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(2.5rem, 8vw, 5rem);
-  font-weight: 600;
   color: var(--color-cream);
   margin: 0;
   line-height: 1.1;
@@ -294,6 +298,7 @@ a:hover {
 .cover-intro-amp {
   display: block;
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: var(--color-gold);
   margin: 0.5rem 0;
@@ -316,6 +321,7 @@ a:hover {
 
 .cover-intro-date {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   letter-spacing: 0.15em;
   color: var(--color-surface);
@@ -430,6 +436,7 @@ a:hover {
 
 .hero-label {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(0.85rem, 2vw, 1rem);
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -440,8 +447,8 @@ a:hover {
 .hero-name1,
 .hero-name2 {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(2.4rem, 7vw, 4.5rem);
-  font-weight: 600;
   color: var(--color-cream);
   margin: 0;
   line-height: 1.1;
@@ -451,6 +458,7 @@ a:hover {
 .hero-amp {
   display: block;
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.4rem, 4vw, 2.25rem);
   color: var(--color-gold);
   margin: 0.4rem 0;
@@ -458,6 +466,7 @@ a:hover {
 
 .hero-date {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.15rem, 2.8vw, 1.5rem);
   letter-spacing: 0.2em;
   color: var(--color-text-muted);
@@ -513,8 +522,8 @@ a:hover {
 
 .section-title {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.75rem, 4vw, 2.4rem);
-  font-weight: 600;
   color: var(--color-gold);
   text-align: center;
   margin: 0 0 2rem;
@@ -595,8 +604,8 @@ a:hover {
 
 .initials-ayat-card .initial-amp {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 400;
   color: var(--color-gold);
   opacity: 0.9;
   line-height: 1;
@@ -705,7 +714,7 @@ a:hover {
 
 .we-are-couple-card .section-title {
   font-family: var(--font-script);
-  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  font-size: clamp(2.6rem, 7vw, 4rem);
   font-weight: 400;
   letter-spacing: 0.02em;
   color: var(--color-gold);
@@ -718,7 +727,7 @@ a:hover {
   text-align: center;
   color: #2c2825;
   margin: 0 1.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .we-are-couple-card .couple-cards {
@@ -920,7 +929,7 @@ a:hover {
 
 .couple-name {
   font-family: var(--font-script);
-  font-size: 1.85rem;
+  font-size: 2.15rem;
   font-weight: 400;
   color: var(--color-gold);
   margin: 0 0 0.25rem;
@@ -928,25 +937,27 @@ a:hover {
 }
 
 .couple-fullname {
-  font-size: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
   color: #5c554d;
   margin: 0 0 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .couple-parents {
-  font-size: 0.95rem;
-  color: var(--color-gold);
+  font-size: 1.1rem;
+  color: #8B4513;
   margin: 0 0 0.5rem;
 }
 
 .couple-ig {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .couple-amp {
   align-self: center;
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: 1.8rem;
   color: var(--color-gold);
 }
@@ -984,8 +995,8 @@ a:hover {
 .countdown-value {
   display: block;
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
   color: var(--color-gold);
   line-height: 1.2;
   margin-bottom: 0.25rem;
@@ -1041,42 +1052,42 @@ a:hover {
 
 .event-title {
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-display);
+  font-size: 1.6rem;
   color: var(--color-gold);
   margin: 0 0 1.25rem;
   letter-spacing: 0.02em;
 }
 
 .event-day {
-  font-size: 0.95rem;
-  color: #6b6359;
+  font-size: 1.6rem;
+  color: #8B4513;
   text-transform: lowercase;
   margin: 0 0 0.15rem;
 }
 
 .event-date {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #3d3935;
   text-transform: lowercase;
   margin: 0.15rem 0;
 }
 
 .event-time {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #3d3935;
   margin: 0.25rem 0;
 }
 
 .event-venue {
-  font-weight: 600;
+  font-weight: 800;
   color: #2c2825;
-  margin-top: 1.25rem;
-  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .event-address {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #5c554d;
   margin: 0.5rem 0 1rem;
 }
@@ -1089,7 +1100,8 @@ a:hover {
   border: 1px solid var(--color-gold);
   border-radius: var(--radius);
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-weight: var(--font-weight-body);
+  font-size: 1rem;
   transition: background var(--transition), color var(--transition);
 }
 
@@ -1179,8 +1191,8 @@ a:hover {
 .timeline-year {
   display: inline-block;
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: 1.2rem;
-  font-weight: 600;
   color: var(--color-gold);
   margin-bottom: 0.5rem;
 }
@@ -1213,6 +1225,7 @@ a:hover {
 
 .gift-card h4 {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: 1.2rem;
   color: var(--color-gold);
   margin: 0 0 0.75rem;
@@ -1262,8 +1275,39 @@ a:hover {
   color: var(--color-text-muted);
 }
 
+/* Tombol download QRIS – background cream, selaras tema */
+.btn-download-qris {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: #000000;
+  background: var(--color-cream);
+  border: 1px solid rgba(201, 169, 98, 0.5);
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-download-qris:hover {
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border-color: var(--color-gold);
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(201, 169, 98, 0.25);
+}
+
 .btn-copy {
   font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
   background: transparent;
@@ -1288,6 +1332,7 @@ a:hover {
 /* Thanks / Wishes (sesuai referensi: Wishes, Ucapan Selamat & Do'a) */
 .wishes-title {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: 1.45rem;
   font-weight: 600;
   color: var(--color-gold);
@@ -1332,6 +1377,7 @@ a:hover {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   font-family: var(--font-body);
+  font-weight: var(--font-weight-body);
   font-size: 1rem;
   color: var(--color-text);
   background: var(--color-bg-card);
@@ -1384,6 +1430,7 @@ a:hover {
 
 .closing-names {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: 1.15rem;
   color: var(--color-text-muted);
   margin: 0 0 0.5rem;
@@ -1392,8 +1439,8 @@ a:hover {
 
 .closing-couple {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: clamp(1.75rem, 4vw, 2.4rem);
-  font-weight: 600;
   color: var(--color-gold);
   margin: 0;
 }
@@ -1437,8 +1484,8 @@ a:hover {
 
 .footer-couple {
   font-family: var(--font-display);
+  font-weight: var(--font-weight-display);
   font-size: 1.25rem;
-  font-weight: 600;
   color: var(--color-gold);
   margin: 0.35rem 0;
 }
